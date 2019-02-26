@@ -27,7 +27,22 @@ h6 {
   font-size: 0.8rem;
 }
 
+.card-text {
+  color: #ff8f73;
+  font-weight: 800;
+}
+
 #btnNewsletter {
   color: #ff8f73;
   font-size: 0.8rem;
+}
+
+#btnComprar {
+  color: white;
+  font-size: 0.8rem;
+  background-color: #ff8f73;
+}
+
+#value {
+  font-size: 1.5rem;
 }
