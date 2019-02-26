@@ -14,9 +14,13 @@ body {
   background-color: #ff8f73;
 }
 
-div h3,
-h6 {
-  color: white;
+h1 {
+  font-size: 1.75rem;
+  letter-spacing: 1px;
+}
+
+h3 {
+  letter-spacing: 1px;
 }
 
 h6 {
