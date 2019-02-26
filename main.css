@@ -1,4 +1,29 @@
+html,
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* height: 60px; */
+  line-height: 60px;
+  background-color: #ff8f73;
+}
+
+div h3,
+h6 {
+  color: white;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+#btnNewsletter {
+  color: #ff8f73;
+  font-size: 0.8rem;
 }
