@@ -72,13 +72,21 @@
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a href="#" class="nav-link mr-4"
-                ><i class="far fa-user mr-2"></i>Minha conta</a
+              <button
+                class="nav-link btn btn-link mr-4"
+                data-toggle="popover"
+                title="The button popover"
+                data-placement="bottom"
+                data-html="true"
+                ;
               >
+                <i class="far fa-user mr-2"></i>Minha conta
+              </button>
             </li>
             <li class="nav-item">
               <a href="" class="nav-link"
-                ><i class="fas fa-shopping-cart"></i><span class="d-inline d-lg-none ml-2">Meu carrinho</span>
+                ><i class="fas fa-shopping-cart"></i
+                ><span class="d-inline d-lg-none ml-2">Meu carrinho</span>
               </a>
             </li>
           </ul>
@@ -93,26 +101,11 @@
             <h1 class="mb-4">Produtos em destaque</h1>
           </div>
           <div class="col-12 mb-5">
-            <div class="row d-flex justify-content-around" id="products">
-              
-              <!-- Exemplo de card
-              <div class="card" style="width: 18rem;">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.
-                  </p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div> -->
-
-
-            </div>
+            <div class="row d-flex justify-content-around" id="products"></div>
           </div>
         </div>
       </div>
     </section>
-
 
     <footer class="navbar sticky-bottom d-none d-lg-block">
       <div class="container py-2 d-flex justify-content-around">
@@ -125,12 +118,14 @@
           </div>
           <div class="col-xl-8 d-flex justify-content-center">
             <form class="form-inline my-2 my-lg-0">
-            <input type="text" class="form-control mr-sm-2" aria-describedby="nameHelp" placeholder="Seu nome" />
-            <form class="form-inline my-2 my-lg-0">
+              <input
+                type="text"
+                class="form-control mr-sm-2"
+                placeholder="Seu nome"
+              />
               <input
                 type="email"
                 class="form-control mr-sm-2"
-                aria-describedby="emailHelp"
                 placeholder="Seu email"
               />
               <button
@@ -144,12 +139,19 @@
           </div>
         </div>
       </div>
-    </nav>
+    </footer>
 
     <!-- JQuery -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Popper JS -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"
     ></script>
 

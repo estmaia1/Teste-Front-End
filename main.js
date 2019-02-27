@@ -22,7 +22,7 @@ $(document).ready(function() {
             data.productName +
             '</h6>\n <p class="card-text">R$ <span id="value">' +
             data.price.toFixed(2).replace(".", ",") +
-            '</span></p> \n<a href="#" class="btn btn-light btn-lg py-3" id="btnComprar">COMPRAR<i class="fas fa-shopping-cart ml-2"></i></a>\n </div>\n </div>\n</div>'
+            '</span></p> \n<button class="btn btn-light btn-lg py-3" id="btnComprar">COMPRAR<i class="fas fa-shopping-cart ml-2"></i></button>\n </div>\n </div>\n</div>'
         );
       });
 
@@ -31,12 +31,19 @@ $(document).ready(function() {
         $(this).toggleClass("shadow bg-white mb-5 mb-2 rounded border-0");
         //Exibe/oculta o botão de compra
         $(this)
-          .find("a")
+          .find("button")
           .toggle();
       });
     },
     error: function(error) {
       alert(error);
     }
+  });
+
+  $(".nav-link").popover({
+    container: "body",
+    html: true,
+    content:
+      '<label for="email">Email:</label>\n<input type="email" name="email" id="email" class= "form-control input-md">'
   });
 });
