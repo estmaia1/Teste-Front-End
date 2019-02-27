@@ -14,7 +14,6 @@ $(document).ready(function() {
     success: function(response) {
       response.forEach(function(data) {
         $("#products").append(
-          // "<li>" + data.productName + ":" + data.productId + "</li>"
           // Criação dos cards em colunas reponsivas
           '<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">\n<div class="card mb-5" style="width: 18rem;">\n <a href="html/product.html#' +
             data.productId +
@@ -42,12 +41,12 @@ $(document).ready(function() {
     }
   });
 
-  $(".nav-link").popover({
-    container: "body",
-    html: true,
-    content:
-      '<label for="email">Email:</label>\n<input type="email" name="email" id="email" class= "form-control input-md">'
-  });
+  // $(".nav-link").popover({
+  //   container: "body",
+  //   html: true,
+  //   content:
+  //     '<label for="email">Email:</label>\n<input type="email" name="email" id="email" class= "form-control input-md">'
+  // });
 });
 
 $("#btnNewsletter").click(function() {

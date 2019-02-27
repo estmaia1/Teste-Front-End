@@ -45,11 +45,20 @@ h6 {
   background-color: #ff8f73;
 }
 
-#value {
-  font-size: 1.5rem;
+#totalValue,
+#finalValue {
+  font-weight: 800;
 }
 
-#products {
-  /* Margem para evitar que a prateleira de produtos colida com o rodapé */
-  margin-bottom: 8rem;
+#totalValue {
+  color: #bbc0c4;
+  text-decoration: line-through;
+}
+
+#finalValue {
+  color: #ff8f73;
+}
+
+#value {
+  font-size: 1.5rem;
 }

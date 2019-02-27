@@ -8,8 +8,19 @@ $(document).ready(function() {
     datatype: "JSON",
     contentType: "application/json",
     url: pId,
+    data: JSON.stringify({
+      productId: "value",
+      productName: "value",
+      imageUrl: "value",
+      price: "value"
+    }),
     success: function(response) {
-      alert("done");
+      $("img").attr("src", response.imageUrl);
+      $("#title").text(response.productName);
+      $("#value").text(response.price.toFixed(2).replace(".", ","));
+      $("#totalValue").text(
+        "R$ " + (Number(response.price) + 0.5).toFixed(2).replace(".", ",")
+      );
     },
     error: function(error) {
       alert("error");
