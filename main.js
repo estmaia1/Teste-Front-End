@@ -47,3 +47,23 @@ $(document).ready(function() {
       '<label for="email">Email:</label>\n<input type="email" name="email" id="email" class= "form-control input-md">'
   });
 });
+
+$("#btnNewsletter").click(function() {
+  $.ajax({
+    type: "POST",
+    datatype: "json",
+    url: "http://api.vtexcrm.com.br/corebiz/dataentities/TE/documents",
+    data: {
+      name: $("#nlNome").val(),
+      email: $("#nlEmail").val(),
+      notice: "teste",
+      phone: "00000000"
+    },
+    success: function(result) {
+      alert("ok");
+    },
+    error: function(result) {
+      alert("error");
+    }
+  });
+});

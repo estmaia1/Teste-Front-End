@@ -100,14 +100,14 @@
           <div id="headingGroup" class="text-black text-center mt-5">
             <h1 class="mb-4">Produtos em destaque</h1>
           </div>
-          <div class="col-12 mb-5">
+          <div class="col-12">
             <div class="row d-flex justify-content-around" id="products"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="navbar sticky-bottom d-none d-lg-block">
+    <footer class="navbar fixed-bottom d-none d-lg-block pt-0">
       <div class="container py-2 d-flex justify-content-around">
         <div class="row d-flex justify-content-between align-items-center">
           <div class="text-center text-white col-xl-4">
@@ -120,18 +120,21 @@
             <form class="form-inline my-2 my-lg-0">
               <input
                 type="text"
+                id="nlNome"
                 class="form-control mr-sm-2"
                 placeholder="Seu nome"
+                required
               />
               <input
                 type="email"
+                id="nlEmail"
                 class="form-control mr-sm-2"
                 placeholder="Seu email"
               />
               <button
                 id="btnNewsletter"
                 class="btn btn-light py-2 px-5 ml-3"
-                type="submit"
+                type="button"
               >
                 ENVIAR
               </button>
