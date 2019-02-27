@@ -28,10 +28,16 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../css/product.css"
+    />
 
     <!-- <script src="main.js"></script> -->
   </head>
+
   <body>
     <nav
       id="mainNavbar"
@@ -94,15 +100,28 @@
       </div>
     </nav>
 
-    <section class="container">
+    <section class="container mt-5">
       <div class="row align-items-center">
-        <div class="col-12">
-          <div id="headingGroup" class="text-black text-center mt-5">
-            <h1 class="mb-4">Produtos em destaque</h1>
-          </div>
-          <div class="col-12">
-            <div class="row d-flex justify-content-around" id="products"></div>
-          </div>
+        <div class="col-6" id="image">
+          <img src="" alt="" />
+        </div>
+        <div class="col-6" id="info">
+          <h1 id="title">Nome do produto completo</h1>
+          <p id="totalValue">R$ <span>00,00</span></p>
+          <p id="finalValue">R$ <span>00,00</span></p>
+          <!-- Quantidade -->
+          <form class="form-inline my-2 my-lg-0">
+            <input
+              class="form-control"
+              type="number"
+              min="1"
+              value="1"
+              id="qtd"
+            />
+            <button class="btn btn-light btn-lg px-5 ml-2" id="btnComprar">
+              COMPRAR<i class="fas fa-shopping-cart ml-2"></i>
+            </button>
+          </form>
         </div>
       </div>
     </section>
@@ -165,6 +184,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="javascript/main.js"></script>
+    <script src="../javascript/product.js"></script>
   </body>
 </html>

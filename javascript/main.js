@@ -16,9 +16,11 @@ $(document).ready(function() {
         $("#products").append(
           // "<li>" + data.productName + ":" + data.productId + "</li>"
           // Criação dos cards em colunas reponsivas
-          '<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">\n<div class="card mb-5" style="width: 18rem;">\n  <img src=" ' +
+          '<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">\n<div class="card mb-5" style="width: 18rem;">\n <a href="html/product.html#' +
+            data.productId +
+            '">\n<img src=" ' +
             data.imageUrl +
-            ' " class="card-img-top" alt="...">\n  <div class="card-body d-flex flex-column">\n    <h6 class="card-title">' +
+            ' " class="card-img-top">\n</a>\n  <div class="card-body d-flex flex-column">\n    <h6 class="card-title">' +
             data.productName +
             '</h6>\n <p class="card-text">R$ <span id="value">' +
             data.price.toFixed(2).replace(".", ",") +
@@ -53,12 +55,12 @@ $("#btnNewsletter").click(function() {
     type: "POST",
     datatype: "json",
     url: "http://api.vtexcrm.com.br/corebiz/dataentities/TE/documents",
-    data: {
+    data: JSON.stringify({
       name: $("#nlNome").val(),
       email: $("#nlEmail").val(),
       notice: "teste",
       phone: "00000000"
-    },
+    }),
     success: function(result) {
       alert("ok");
     },
