@@ -14,12 +14,11 @@ $(document).ready(function() {
       price: "value"
     }),
     success: function(response) {
-      alert("done");
       response.forEach(function(data) {
         $("#products").append(
           // "<li>" + data.productName + ":" + data.productId + "</li>"
           // Criação dos cards em colunas reponsivas
-          '<div class="col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">\n<div class="card mt-4" style="width: 18rem;">\n  <img src=" ' +
+          '<div class="col-sm-6 col-md-6 col-lg-4 col-xl-3 d-flex justify-content-center">\n<div class="card mt-4" style="width: 18rem;">\n  <img src=" ' +
             data.imageUrl +
             ' " class="card-img-top" alt="...">\n  <div class="card-body d-flex flex-column justify-content-end">\n    <h6 class="card-title">' +
             data.productName +
