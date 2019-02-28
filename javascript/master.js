@@ -20,10 +20,3 @@ $("#btnNewsletter").click(function() {
     }
   });
 });
-
-// $(".nav-link").popover({
-//   container: "body",
-//   html: true,
-//   content:
-//     '<label for="email">Email:</label>\n<input type="email" name="email" id="email" class= "form-control input-md">'
-// });
