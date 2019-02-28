@@ -27,9 +27,29 @@ h6 {
   font-size: 0.8rem;
 }
 
+.overlay {
+  position: absolute;
+  z-index: 3;
+}
+
 .card-text {
   color: #ff8f73;
   font-weight: 800;
+}
+
+.badge:after {
+  content: attr(data-count);
+  position: absolute;
+  background: #ff8f73;
+  height: 2rem;
+  top: 1rem;
+  right: 1.5rem;
+  width: 2rem;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1rem;
+  border-radius: 50%;
+  color: white;
 }
 
 #mainNavbar {
@@ -55,4 +75,26 @@ h6 {
 #products {
   /* Margem para evitar que a prateleira de produtos colida com o rodapé */
   margin-bottom: 8rem;
+}
+
+#cart {
+  display: none;
+  width: 100%;
+  background-color: white;
+}
+
+#cart .row:nth-child(1) {
+  background-color: #ff8f73;
+  color: white;
+}
+
+#dot {
+  font-size: 0.6rem;
+  position: absolute;
+  top: 2px;
+  padding: 1px 5px;
+  white-space: nowrap;
+  color: #fff;
+  border-radius: 10px;
+  background-color: #ff8f73;
 }

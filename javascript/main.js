@@ -49,11 +49,16 @@ $(document).ready(function() {
   // });
 });
 
+$("#btnCart").click(function() {
+  $("#cart").toggle();
+  $("#cart").toggleClass("overlay");
+});
+
 $("#btnNewsletter").click(function() {
   $.ajax({
-    type: "POST",
-    datatype: "json",
     url: "http://api.vtexcrm.com.br/corebiz/dataentities/TE/documents",
+    type: "POST",
+    contentType: "application/json; charset=utf-8",
     data: JSON.stringify({
       name: $("#nlNome").val(),
       email: $("#nlEmail").val(),
@@ -61,10 +66,10 @@ $("#btnNewsletter").click(function() {
       phone: "00000000"
     }),
     success: function(result) {
-      alert("ok");
+      alert("Sucesso! Id: " + result.Id);
     },
     error: function(result) {
-      alert("error");
+      alert(result);
     }
   });
 });

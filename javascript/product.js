@@ -26,20 +26,18 @@ $(document).ready(function() {
       alert("error");
     }
   });
+});
 
-  $(".nav-link").popover({
-    container: "body",
-    html: true,
-    content:
-      '<label for="email">Email:</label>\n<input type="email" name="email" id="email" class= "form-control input-md">'
-  });
+$("#btnCart").click(function() {
+  $("#cart").toggle();
+  $("#cart").toggleClass("overlay");
 });
 
 $("#btnNewsletter").click(function() {
   $.ajax({
-    type: "POST",
-    datatype: "json",
     url: "http://api.vtexcrm.com.br/corebiz/dataentities/TE/documents",
+    type: "POST",
+    contentType: "application/json; charset=utf-8",
     data: JSON.stringify({
       name: $("#nlNome").val(),
       email: $("#nlEmail").val(),
@@ -47,10 +45,10 @@ $("#btnNewsletter").click(function() {
       phone: "00000000"
     }),
     success: function(result) {
-      alert("ok");
+      alert("Sucesso! Id: " + result.Id);
     },
     error: function(result) {
-      alert("error");
+      alert(result);
     }
   });
 });

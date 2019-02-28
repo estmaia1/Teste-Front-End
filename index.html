@@ -33,6 +33,7 @@
     <!-- <script src="main.js"></script> -->
   </head>
   <body>
+    <!-- Bara de Navegação -->
     <nav
       id="mainNavbar"
       class="navbar sticky-top navbar-expand-lg navbar-light border-bottom justify-content-around"
@@ -84,10 +85,31 @@
               </button>
             </li>
             <li class="nav-item">
-              <a href="" class="nav-link"
-                ><i class="fas fa-shopping-cart"></i
-                ><span class="d-inline d-lg-none ml-2">Meu carrinho</span>
-              </a>
+              <!-- div criada para organizar div do carrinho abaixo do botão -->
+              <div class="row flex-column align-items-end">
+                <div class="col-12">
+                  <button id="btnCart" class="nav-link btn btn-link">
+                    <i class="fas fa-shopping-cart"></i><span id="dot">0</span
+                    ><span class="d-inline d-lg-none ml-2">Meu carrinho</span>
+                  </button>
+                </div>
+                <!-- Popup com conteúdo -->
+                <div class="col-12">
+                  <div id="cart">
+                    <div class="row">
+                      <div class="col-5">
+                        MEU CARRINHO<span id="count"> 00 item(s)</span>
+                      </div>
+                      <div class="col-1"><i class="fas fa-times"></i></div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        Total: R$ <span id="compra">00,00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </li>
           </ul>
         </div>

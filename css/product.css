@@ -25,9 +25,25 @@ h6 {
   font-size: 0.8rem;
 }
 
+.overlay {
+  position: absolute;
+  z-index: 3;
+}
+
 .card-text {
   color: #ff8f73;
   font-weight: 800;
+}
+
+#cart {
+  display: none;
+  width: 100%;
+  background-color: white;
+}
+
+#cart .row:nth-child(1) {
+  background-color: #ff8f73;
+  color: white;
 }
 
 #mainNavbar {
@@ -61,4 +77,15 @@ h6 {
 
 #value {
   font-size: 1.5rem;
+}
+
+#dot {
+  font-size: 0.6rem;
+  position: absolute;
+  top: 2px;
+  padding: 1px 5px;
+  white-space: nowrap;
+  color: #fff;
+  border-radius: 10px;
+  background-color: #ff8f73;
 }
