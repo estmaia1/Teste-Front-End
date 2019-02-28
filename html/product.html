@@ -86,41 +86,22 @@
             <li class="nav-item">
               <button
                 class="nav-link btn btn-link mr-4"
-                data-toggle="popover"
-                title="The button popover"
-                data-placement="bottom"
-                data-html="true"
-                ;
+                data-toggle="modal"
+                data-target="#login"
               >
                 <i class="far fa-user mr-2"></i>Minha conta
               </button>
             </li>
             <li class="nav-item">
-              <!-- div criada para organizar div do carrinho abaixo do botão -->
-              <div class="row flex-column align-items-end">
-                <div class="col-12">
-                  <button id="btnCart" class="nav-link btn btn-link">
-                    <i class="fas fa-shopping-cart"></i><span id="dot">0</span
-                    ><span class="d-inline d-lg-none ml-2">Meu carrinho</span>
-                  </button>
-                </div>
-                <!-- Popup com conteúdo -->
-                <div class="col-12">
-                  <div id="cart">
-                    <div class="row">
-                      <div class="col-5">
-                        MEU CARRINHO<span id="count"> 00 item(s)</span>
-                      </div>
-                      <div class="col-1"><i class="fas fa-times"></i></div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12">
-                        Total: R$ <span id="compra">00,00</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <button
+                id="btnCart"
+                class="nav-link btn btn-link"
+                data-toggle="modal"
+                data-target="#cart"
+              >
+                <i class="fas fa-shopping-cart"></i
+                ><span class="d-inline d-lg-none ml-2">Meu carrinho</span>
+              </button>
             </li>
           </ul>
         </div>
@@ -130,7 +111,8 @@
     <section class="container mt-5">
       <div class="row align-items-center">
         <div class="col-md-6" id="image">
-          <img src="" class="border w-100 h-100 mb-3" />
+          <!-- Foto do produto, a ser carregada dinamicamente -->
+          <img id="imgProd" src="" class="border w-100 h-100 mb-3" />
         </div>
         <div class="col-md-6" id="info">
           <h1 class="mb-5" id="title">Nome do produto completo</h1>
@@ -191,6 +173,151 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal do Carrinho - Modelo não funcional -->
+    <div
+      class="modal fade"
+      id="cart"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="cartTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header" id="cartHeader">
+            <h5 class="modal-title" id="cartTitle">
+              MEU CARRINHO <span id="countItems">01 item(s)</span>
+            </h5>
+
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body" id="cartBody">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12">
+                  <!-- Conteúdo do modal - Deverá ser criado dinamicamente -->
+                  <div class="row product">
+                    <div class="col-6">
+                      <div class="row justify-content-around">
+                        <div class="col-2">
+                          <i class="fas fa-times my-5"></i>
+                        </div>
+                        <div class="col-7">
+                          <img
+                            src="https://proxy.duckduckgo.com/iu/?u=http%3A%2F%2Fcacaushow.vteximg.com.br%2Farquivos%2Fids%2F157160-1000-1000%2Ffotos_0135_truffon-pacoca-30g.png&f=1"
+                            class="w-100 h-100"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <h5>Nome do produto completo</h5>
+                      <div class="row mt-4">
+                        <div class="col-6">
+                          <i class="fas fa-minus"></i
+                          ><span class="mx-2" id="itemQt">1</span
+                          ><i class="fas fa-plus"></i>
+                        </div>
+                        <div class="col-6">
+                          R$ <span id="itemValue">1,00</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="dropdown-divider"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Valores do rodapé calculados dinamicamente -->
+          <div class="modal-footer">
+            <!-- Organização dentro de container fluid para centralizar os itens -->
+            <div class="container-fluid">
+              <div class="row d-flex flex-column text-center">
+                <div class="col-12 mb-3" id="cartValue">
+                  Total: R$ <span>1,00</span>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-light btn-lg py-3" id="btnComprarCart">
+                    COMPRAR<i class="fas fa-shopping-cart ml-2"></i>
+                  </button>
+                </div>
+                <div class="col-12">
+                  <button class="btn btn-link gray">
+                    <i class="fas fa-times"></i> Limpar carrinho
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Login -->
+    <div
+      class="modal fade"
+      id="login"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="loginTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <!-- Organização dentro de container fluid para centralizar os itens -->
+          <div class="container-fluid">
+            <div class="modal-body">
+              <div class="row d-flex flex-column text-center">
+                <div class="col-12">
+                  <button
+                    type="button"
+                    class="close"
+                    id="loginClose"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="col-12">
+                  <h5 class="modal-title" id="loginTitle">
+                    Olá, <span>Willian</span>
+                  </h5>
+                  <h6 id="loginMail" class="gray">
+                    willian.lopes@corebiz.com.br
+                  </h6>
+                  <button id="exitLogin" class="btn btn-link">sair</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <!-- Organização dentro de container fluid para centralizar os itens -->
+            <div class="container-fluid">
+              <div class="row d-flex flex-column text-center">
+                <div class="col-12">
+                  <h5 class="gray">Última compra</h5>
+                  <div class="row">
+                    <!-- Conteúdo da última compra - a ser populado dinamicamente -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- JQuery -->
     <script

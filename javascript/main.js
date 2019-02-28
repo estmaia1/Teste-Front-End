@@ -1,3 +1,5 @@
+// Métodos da página inicial
+
 // Populando a prateleira de produtos, através da grid do bootstrap
 $(document).ready(function() {
   $.ajax({

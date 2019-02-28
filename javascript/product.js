@@ -1,3 +1,5 @@
+// Métodos da página de produto
+
 // Utilização do id transportado pelo hash para consumo dos dados
 pId =
   "https://desolate-brushlands-20405.herokuapp.com/api/product/" +
@@ -16,7 +18,7 @@ $(document).ready(function() {
       price: "value"
     }),
     success: function(response) {
-      $("img").attr("src", response.imageUrl);
+      $("#imgProd").attr("src", response.imageUrl);
       $("#title").text(response.productName);
       $("#value").text(response.price.toFixed(2).replace(".", ","));
       $("#totalValue").text(

@@ -23,6 +23,10 @@ h3 {
   letter-spacing: 1px;
 }
 
+h5 {
+  font-size: 1rem;
+}
+
 h6 {
   font-size: 0.8rem;
 }
@@ -41,24 +45,60 @@ h6 {
   font-size: 0.8rem;
 }
 
-#cart {
-  display: none;
-  width: 100%;
-  background-color: white;
+#loginTitle,
+#loginClose {
+  color: #ff8f73;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
 }
-
-#cart .row:nth-child(1) {
+#cartHeader {
   background-color: #ff8f73;
   color: white;
 }
+#cartHeader .fa-times {
+  color: white;
+}
+.modal-dialog {
+  overflow-y: initial !important;
+}
+#cartBody {
+  height: 250px;
+  overflow-y: auto;
+}
+.close {
+  color: white;
+}
+.close:hover {
+  color: white;
+}
 
-#dot {
-  font-size: 0.6rem;
-  position: absolute;
-  top: 2px;
-  padding: 1px 5px;
-  white-space: nowrap;
-  color: #fff;
-  border-radius: 10px;
+.gray {
+  color: #bbc0c4;
+}
+
+.btn-link.gray:hover {
+  color: gray;
+}
+
+.fa-minus,
+.fa-plus,
+#exitLogin {
+  color: #ff8f73;
+}
+
+#countItems {
+  font-size: 0.9rem;
+}
+
+#itemValue,
+#cartValue {
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+#btnComprarCart {
+  color: white;
+  font-size: 0.8rem;
   background-color: #ff8f73;
+  width: 100%;
 }

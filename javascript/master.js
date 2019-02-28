@@ -16,14 +16,9 @@ $("#btnNewsletter").click(function() {
       alert("Sucesso! Id: " + result.Id);
     },
     error: function(result) {
-      alert("error");
+      alert("Verifique as informações inseridas!");
     }
   });
-});
-
-$("#btnCart").click(function() {
-  $("#cart").toggle();
-  $("#cart").toggleClass("overlay");
 });
 
 // $(".nav-link").popover({
