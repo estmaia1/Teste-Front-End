@@ -1,3 +1,4 @@
+// Utilização do id transportado pelo hash para consumo dos dados
 pId =
   "https://desolate-brushlands-20405.herokuapp.com/api/product/" +
   window.location.hash.slice(1);
