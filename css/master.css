@@ -1,0 +1,64 @@
+/* Propriedades comuns a todas as páginas */
+
+html,
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  line-height: 60px;
+  background-color: #ff8f73;
+}
+
+h1 {
+  font-size: 1.75rem;
+  letter-spacing: 1px;
+}
+
+h3 {
+  letter-spacing: 1px;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 3;
+}
+
+#mainNavbar {
+  background-color: white;
+}
+
+#btnNewsletter {
+  color: #ff8f73;
+  font-size: 0.8rem;
+}
+
+#cart {
+  display: none;
+  width: 100%;
+  background-color: white;
+}
+
+#cart .row:nth-child(1) {
+  background-color: #ff8f73;
+  color: white;
+}
+
+#dot {
+  font-size: 0.6rem;
+  position: absolute;
+  top: 2px;
+  padding: 1px 5px;
+  white-space: nowrap;
+  color: #fff;
+  border-radius: 10px;
+  background-color: #ff8f73;
+}
