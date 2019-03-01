@@ -85,6 +85,7 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <button
+                id="btnConta"
                 class="nav-link btn btn-link mr-4"
                 data-toggle="modal"
                 data-target="#login"
@@ -174,7 +175,7 @@
       </div>
     </footer>
 
-    <!-- Modal do Carrinho - Modelo não funcional -->
+    <!-- Modal do Carrinho - A implementar funcionamento dinâmico -->
     <div
       class="modal fade"
       id="cart"
@@ -291,7 +292,7 @@
                 </div>
                 <div class="col-12">
                   <h5 class="modal-title" id="loginTitle">
-                    Olá, <span>Willian</span>
+                    Olá, <span id="loginName">Willian</span>
                   </h5>
                   <h6 id="loginMail" class="gray">
                     willian.lopes@corebiz.com.br
@@ -304,14 +305,10 @@
 
           <div class="modal-footer">
             <!-- Organização dentro de container fluid para centralizar os itens -->
-            <div class="container-fluid">
-              <div class="row d-flex flex-column text-center">
-                <div class="col-12">
-                  <h5 class="gray">Última compra</h5>
-                  <div class="row">
-                    <!-- Conteúdo da última compra - a ser populado dinamicamente -->
-                  </div>
-                </div>
+            <div class="container-fluid text-center">
+              <h5 class="gray">Última compra</h5>
+              <div class="row align-items-center" id="list">
+                <!-- Conteúdo da última compra - a ser populado dinamicamente -->
               </div>
             </div>
           </div>

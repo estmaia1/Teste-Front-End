@@ -91,7 +91,8 @@ h6 {
 }
 
 #itemValue,
-#cartValue {
+#cartValue,
+#lastVl {
   font-weight: 800;
   font-size: 1rem;
 }
